@@ -1,4 +1,3 @@
-// Importação das dependências
 const express = require('express');
 const { GoogleGenerativeAI } = require('@google/generative-ai');
 const config = require('./config.json');
