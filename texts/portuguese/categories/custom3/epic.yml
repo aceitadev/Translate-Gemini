@@ -1,0 +1,43 @@
+Items: 
+  1:
+    name: "#08FF00Example Item 1" #name that will appear in the store
+    material: ink_sac #here is the item that will appear in the store
+    model-id: 0 #put the model ID here. if you have
+    lore:
+      - "#87CEEBCustom3"
+      - "#D3D3D3[Epic]"
+    permission: "dailyshop.permission" #Enter permission for the item you are selling here to prevent someone who already has the item from purchasing it again. If you want to leave several purchases, leave this blank
+    commands:
+      buy: "lp user %player% permission set dailyshop.permission" #command executed as soon as the player purchases
+      refund: "lp user %player% permission unset dailyshop.permission" #enter the command here to remove the item the player purchased
+    coins: -1 #Enter the price in coins here using vault, to avoid using it, set it to -1
+    cash: 1200 #Enter the price in cash here using playerpoints, to avoid using it, set it to -1
+    refund: true #If you want to enable the refund option, set it to true
+  2:
+    name: "#08FF00Example Item 2"
+    material: ink_sac
+    model-id: 0
+    lore:
+      - "#87CEEBCustom3"
+      - "#D3D3D3[Epic]"
+    permission: "dailyshop.permission"
+    commands:
+      buy: "lp user %player% permission set dailyshop.permission"
+      refund: "lp user %player% permission unset dailyshop.permission"
+    coins: 200
+    cash: 1200
+    refund: true
+  3:
+    name: "#08FF00Example Item 3"
+    material: ink_sac
+    model-id: 0
+    lore:
+      - "#87CEEBCustom3"
+      - "#D3D3D3[Epic]"
+    permission: "dailyshop.permission"
+    commands:
+      buy: "lp user %player% permission set dailyshop.permission"
+      refund: "lp user %player% permission unset dailyshop.permission"
+    coins: -1
+    cash: 1200
+    refund: true

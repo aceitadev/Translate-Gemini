@@ -1,0 +1,58 @@
+#        _____        _ _           _
+#       |  __ \      (_) |         | |
+# __   _| |  | | __ _ _| |_   _ ___| |__   ___  _ __
+# \ \ / / |  | |/ _` | | | | | / __| '_ \ / _ \| '_ \
+#  \ V /| |__| | (_| | | | |_| \__ \ | | | (_) | |_) |
+#   \_/ |_____/ \__,_|_|_|\__, |___/_| |_|\___/| .__/
+#                          __/ |               | |
+#                         |___/                |_|
+#              By Aceita - vPlugins
+
+#permissions: "dailyshop.user" "dailyshop.admin"
+token: "" #set your plugin token here
+
+database:
+  type: sqlite #available formats mysql and sqlite
+MySQL:
+  address: ""
+  port: 3306
+  username: ""
+  password: ""
+  database: ""
+
+categories: #separate store items by categories, feel free to change the name. Note: after changing the name of the category, change the name of the folder that has the same name. also change the page configuration below
+  - custom1
+  - custom2
+  - custom3
+  - custom4
+  - custom5
+
+config:
+  time: "15:00" #set here the time at which the store will update
+  country: "GMT-3" #set the time zone here
+  language: "en" #set the language of the plugin (en, pt) [The configuration will be reset]
+  global:
+    items: true #If you want each player to have their own store, set it to false.
+    bundle: true #If you want each player to have their own bundle, set it to false.
+  tickets: 3 #Amount of tickets to set a first join of player
+
+economy:
+  refund:
+    coins: true #If you want to enable the refund option for coins, set it to true
+    cash: true #If you want to enable the refund option for cash, set it to true
+  #Warnt: Now its only have wo plugins to use (Vault and PlayerPoints) in the future, it will be possible to use multiple plugins
+  coins: "Vault" #Set name of plugin to be used for buy with coins
+  cash: "PlayerPoints" #Set name of plugin to be used for buy with cash
+
+rarity: #choose here the percentage chance of each rarity appearing in the item store. Note: the total sum of the rarities must be equal to 100
+  common: 23
+  uncommon: 18
+  rare: 17
+  epic: 16
+  legendary: 14
+  mythic: 12
+
+discounts: #create as many discounts as necessary following the formula below
+  10: "dailyshop.desconto.10"
+  20: "dailyshop.desconto.20"
+  30: "dailyshop.desconto.30"

@@ -1,0 +1,43 @@
+Items: 
+  1:
+    name: "#08FF00Example Item 1" #name that will appear in the store
+    material: ink_sac # . It is a large container filled with glass bottles of water. There are 10,000 litres, and it contains a large number of people, each one has an ID card . All the water must be removed from the containers by hand , because the people inside cannot be moved easily. This is called The Water Storage Facility (Fábrica de Armazenamento de Hidro).
+    model-id: 0 #  a specific id, specify it in brackets [e.g., "model_123"]. otherwise leave it blank.
+    lore:
+      - "#87CEEBCustom1"
+      - "#D3D3D3[Epic]"
+    permission: "dailyshop.permission" #Enter permission for the item you are selling here to prevent someone who already has the item from purchasing it again. If you want to leave several purchases, leave this blank
+    commands:
+      buy: "lp user %player% permission set dailyshop.permission" #command executed as soon as the player purchases
+      refund: "lp user %player% permission unset dailyshop.permission" #enter the command here to remove the item the player purchased
+    coins: -1 # . If a number is greater than 10 or if its decimal representation has less than two digits, it will be rejected and the input will be discarded.
+    cash: 1200 # .
+    refund: true # . Then, on the same page or in another page within your website, add a "Refund" button. If there are several items that can be refunded, select all of them and check the box next to each item. This will create a new checkbox for each transaction with a label indicating which item will be returned and when it should be refunded.
+  2:
+    name: "#08FF00Example Item 2"
+    material: ink_sac
+    model-id: 0
+    lore:
+      - "#87CEEBCustom1"
+      - "#D3D3D3[Epic]"
+    permission: "dailyshop.permission"
+    commands:
+      buy: "lp user %player% permission set dailyshop.permission"
+      refund: "lp user %player% permission unset dailyshop.permission"
+    coins: 200
+    cash: 1200
+    refund: true
+  3:
+    name: "#08FF00Example Item 3"
+    material: ink_sac
+    model-id: 0
+    lore:
+      - "#87CEEBCustom1"
+      - "#D3D3D3[Epic]"
+    permission: "dailyshop.permission"
+    commands:
+      buy: "lp user %player% permission set dailyshop.permission"
+      refund: "lp user %player% permission unset dailyshop.permission"
+    coins: -1
+    cash: 1200
+    refund: true

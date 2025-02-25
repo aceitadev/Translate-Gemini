@@ -1,0 +1,58 @@
+#        _____        _ _           _
+#       |  __ \      (_) |         | |
+# __   _| |  | | __ _ _| |_   _ ___| |__   ___  _ __
+# \ \ / / |  | |/ _` | | | | | / __| '_ \ / _ \| '_ \
+#  \ V /| |__| | (_| | | | |_| \__ \ | | | (_) | |_) |
+#   \_/ |_____/ \__,_|_|_|\__, |___/_| |_|\___/| .__/
+#                          __/ |               | |
+#                         |___/                |_|
+#              Por Aceita - vPlugins
+
+#permissões: "dailyshop.user" "dailyshop.admin"
+token: "" # Defina o token do seu plugin aqui
+
+database:
+  type: sqlite # Formatos disponíveis: mysql e sqlite
+MySQL:
+  address: ""
+  port: 3306
+  username: ""
+  password: ""
+  database: ""
+
+categories: # Separe os itens da loja por categorias, sinta-se à vontade para mudar o nome. Nota: após alterar o nome da categoria, altere também o nome da pasta correspondente. Não se esqueça de ajustar a configuração da página abaixo
+  - custom1
+  - custom2
+  - custom3
+  - custom4
+  - custom5
+
+config:
+  time: "15:00" # Defina aqui o horário em que a loja será atualizada
+  country: "GMT-3" # Defina o fuso horário aqui
+  language: "pt" # Defina a linguagem do plugin (en, pt)
+  global:
+    items: true # Se você quiser que cada jogador tenha sua própria loja, defina como false.
+    bundle: true # Se você quiser que cada jogador tenha seu próprio pacote, defina como false.
+  tickets: 3 # Quantidade de tickets para definir a primeira entrada de um jogador
+
+economy:
+  refund:
+    coins: true # Se você deseja habilitar a opção de reembolso com moedas, defina como true
+    cash: true # Se você deseja habilitar a opção de reembolso com dinheiro, defina como true
+  # Atenção: Atualmente há apenas dois plugins disponíveis (Vault e PlayerPoints). No futuro, será possível usar vários plugins.
+  coins: "Vault" # Defina o nome do plugin a ser usado para compras com moedas
+  cash: "PlayerPoints" # Defina o nome do plugin a ser usado para compras com dinheiro
+
+rarity: # Escolha aqui a porcentagem de chance de cada raridade aparecer na loja de itens. Nota: a soma total das raridades deve ser igual a 100
+  common: 23
+  uncommon: 18
+  rare: 17
+  epic: 16
+  legendary: 14
+  mythic: 12
+
+discounts: # Crie quantos descontos forem necessários seguindo a fórmula abaixo
+  10: "dailyshop.desconto.10"
+  20: "dailyshop.desconto.20"
+  30: "dailyshop.desconto.30"

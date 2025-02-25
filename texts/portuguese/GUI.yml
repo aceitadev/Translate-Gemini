@@ -1,0 +1,166 @@
+UIs:
+  main:
+    size: 36 # Este é o tamanho da GUI
+    name: "Loja Diária" # Para definir o nome da GUI para o nome do pacote, use "%bundle.page%"
+    bundle: [13] # slots onde o botão de compra do pacote estará localizado
+    pages:
+      1: # Este número representa a página a ser exibida
+        categories:
+          custom1: # Esta é a configuração do slot, use a lógica no exemplo abaixo para personalizá-la a seu gosto
+            1: [28]
+            2: [29]
+            3: [30]
+          custom2:
+            1: [32]
+            2: [33]
+            3: [34]
+        buttons:
+          nextpag: [17]
+          home: [] #adicione o slot para o botão "home"
+      2:
+        categories:
+          custom3:
+            1: [28]
+            2: [29]
+          custom4:
+            1: [30]
+          custom5:
+            1: [32]
+            2: [33]
+            3: [34]
+        buttons:
+          prevpag: [9]
+          home: []
+
+  refund:
+    size: 36
+    name: "Reembolso"
+    slots: [11, 12, 13, 14, 15]
+    slotsweb: [13]
+    slotsinfo: [31]
+
+  historic:
+    name: "Histórico"
+    slotshome: [49]
+    slotsnextpag: [50]
+    slotsprevpag: [48]
+
+  confirmation:
+    size: 9
+    name: "Confirmação"
+    slotsconfirm: [3]
+    slotscancel: [5]
+
+  bundle:
+    size: 36
+    name: "Confirmação do Pacote"
+    slotsconfirm: [30]
+    slotscancel: [32]
+    slotsprice: [31]
+
+buttons: # Esta é a configuração dos botões, altere o nome, lore, material e adicione um id de modelo conforme desejar
+  main:
+    prevpag:
+      name: "&ePágina Anterior"
+      lore:
+        - "#A9A9A9clique aqui para ir para a página anterior"
+        - ""
+      material: "paper"
+      model-id: 0
+    nextpag:
+      name: "&ePróxima Página"
+      lore:
+        - "#A9A9A9clique aqui para ir para a próxima página"
+        - ""
+      material: "paper"
+      model-id: 0
+    home:
+      name: "&eInício"
+      lore:
+        - "#A9A9A9Clique aqui para retornar à página inicial"
+        - ""
+      material: "chest"
+      model-id: 0
+    bundle:
+      name: "%bundle.name%"
+      lore:
+        - "%bundle.lore%"
+      material: "chest"
+      model-id: 0
+
+  bundle:
+    confirm:
+      name: "&aClique para Confirmar"
+      lore:
+        - "&7Você tem certeza de que deseja comprar &c%bundle.name%?"
+        - ""
+      material: "lime_dye"
+      model-id: 0
+    cancel:
+      name: "&cClique para Cancelar"
+      lore:
+        - "&7Você tem certeza de que deseja cancelar?"
+        - ""
+      material: "red_dye"
+      model-id: 0
+    price:
+      name: "&ePreço:"
+      lore:
+        - "&c&m$%price.full% por &a&m$%price.discount%"
+        - ""
+      material: "paper"
+      model-id: 0
+
+  shop:
+    confirm:
+      name: "&aClique para Confirmar"
+      lore:
+        - "&7Você tem certeza de que deseja comprar &c%item.name%?"
+        - "&7Cash: &a%cash%"
+        - "&7Coins: &e%coins%"
+      material: "lime_dye"
+      model-id: 0
+    cancel:
+      name: "&cClique para Cancelar"
+      lore:
+        - "&7Você tem certeza de que deseja cancelar?"
+        - ""
+      material: "red_dye"
+      model-id: 0
+
+  historic:
+    prevpag:
+      name: "&ePágina Anterior"
+      lore:
+        - "#A9A9A9clique aqui para ir para a página anterior"
+        - ""
+      material: "paper"
+      model-id: 0
+    nextpag:
+      name: "&ePróxima Página"
+      lore:
+        - "#A9A9A9clique aqui para ir para a próxima página"
+        - ""
+      material: "paper"
+      model-id: 0
+    home:
+      name: "&eInício"
+      lore:
+        - "#A9A9A9Clique aqui para retornar à página inicial"
+        - ""
+      material: "chest"
+      model-id: 0
+
+  refund:
+    web:
+      name: "&cNenhum item comprado"
+      lore:
+        - ""
+      material: "cobweb"
+      model-id: 0
+    info:
+      name: "&eTickets disponíveis: &c%tickets%"
+      lore:
+        - ""
+      material: "paper"
+      model-id: 0
